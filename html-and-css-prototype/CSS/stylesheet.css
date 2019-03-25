@@ -57,15 +57,13 @@ h1 {
 */
 .speechBox {
 	position: relative;
-	padding: .9em;
-	color: white;
-	font-size: .9em;
+	margin: 1em 0 1em;
 	background: #424242;
 	border-radius: 3px;
-	/*-webkit-border-radius:5px;*/
-	/*-moz-border-radius:10px;*/
-	margin: 1em 0 1em;
-	/*Without a margin (outer padding) you can't see the triangle)*/
+	color: white;
+	font-size: .9em;
+	/*Note: without a margin (outer padding) you can't see the triangle)*/
+	padding: .9em;
 }
 
 .speechBox span{
@@ -79,10 +77,10 @@ h1 {
 	width: 0;
 	height: 0;
 	bottom: -6px; /*From above sources: value = - border-top-width - border-bottom-width */
+	border-color: #424242 transparent;
 	border-width: 7px 5px 0; /* Learned: vary these values to change the angle of the vertex.  Top, bottom, R, L */
 	border-style: solid; /*Because the border makes the triangle, we need to see it :)*/
 	right: 12%;
-	border-color: #424242 transparent;
 }
 
 .progress {
@@ -91,49 +89,47 @@ h1 {
 	background-color: #f6f6f6;
 	border: thin solid #eaeaea;
 	border-bottom: none;
-	box-shadow: 0px 1px #eaeaea inset; /*box-shadow: horizontal ofset, vertical offset, optional blur, color*/
+	box-shadow: 0px 1px #eaeaea inset; /*box-shadow: horizontal offset, vertical offset, optional blur, color*/
 }
 
 .progress span {
-	display: block;
-	height: 100%;
-	background-color: #EF5F3C;
-	color: #EF5F3C;
-	box-shadow: 0px 1px #ff8c3a inset;
 	position: relative;
+	height: 100%;
+	display: block;
+	background-color: #EF5F3C;
+	box-shadow: 0px 1px #ff8c3a inset;
 }
 
 .fundBox {
-	color: #777;
-	border: thin solid #eaeaea;
-	padding: 20px 20px 5px 20px;
-	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
-	box-shadow: 0px 1px #f6f6f6;
 	position: relative;
+	border: thin solid #eaeaea;
+	box-shadow: 0px 1px #f6f6f6;
+	color: #777;
+	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
+	padding: 20px 20px 5px 20px;
 }
 
 .fundBox span {
 	color: #EF5F3C;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
 	font-weight: bold;
-	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif; /*This font seems off*/
 }
 
 .fundBox p {
-	/*padding: .5em;*/
 	padding-bottom: 10px;
+	padding-right: 5px;
 	text-align: left;
 }
 
 .fundBox a {
 	color: #20A1D4;
-	text-align: left;
 	font-style: italic;
+	text-align: left;
 	text-decoration: none;
 }
 
 .fundBox form {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 }
 
@@ -146,13 +142,13 @@ h1 {
 .currency {
 	width: 47%;
 	border: 1px solid #eaeaea;
+	border-radius: 3px;
 	box-shadow: 0px 1px #f6f6f6 inset;
-	text-align: left;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-left: .5em;
-	border-radius: 3px;
-	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+	text-align: left;
 }
 
 .why {
@@ -169,22 +165,21 @@ h1 {
 }
 
 input[type=submit]{
-	background-color: #1CBC2C;
-	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
-	color: white;
-	border-radius: 2px;
 	margin-top: 1px;
-	padding: .5em; /*Choose em for scalability (relation to current font size.  Later switched to px for better pixel perfect  */
-	box-shadow: 1px 1px #19a827;
+	background-color: #1CBC2C;
 	border:none;
+	border-radius: 2px;
+	box-shadow: 1px 1px #19a827;
+	color: white;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
 	font-size: 1.2em;
+	padding: .5em; /*Choose em for scalability (relation to current font size.  Later switched to px for better pixel perfect  */
 }
 
 .social {
-    margin-top: 10px;
 	display: flex;
-	flex-directon: row;
 	justify-content: space-between;
+	margin-top: 10px;
 }
 
 .social button {
@@ -192,9 +187,9 @@ input[type=submit]{
     background-color: #f6f6f6;
     border-radius: 3px;
     border: solid thin #eaeaea;
-    color: dimgrey;
+	box-shadow: 0px 1px #eaeaea;
+	color: dimgrey;
     font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
     font-weight: 550;
     padding: 10px;
-	box-shadow: 0px 1px #eaeaea;
 }
