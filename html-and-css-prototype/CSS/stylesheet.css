@@ -92,6 +92,7 @@ h1 {
 	background-color: #f6f6f6;
 	border: thin solid #eaeaea;
 	border-bottom: none;
+	box-shadow: 0px 1px #eaeaea inset; /*box-shadow: horizontal ofset, vertical offset, optional blur, color*/
 }
 
 .progress span {
@@ -104,7 +105,7 @@ h1 {
 .fundBox {
 	color: #777;
 	border: thin solid #eaeaea;
-	padding: 20px;
+	padding: 20px 20px 5px 20px;
 	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
 }
 
@@ -136,28 +137,41 @@ h1 {
 .fundBox input{
 	width:47%;
 	height: 45px;
+	box-sizing: border-box;
 }
 
-input[type=number]{
-	padding-left: 15px;
-    border-radius: 3px;
-    border: solid thin #eaeaea;
+.currencyinput {
+	width: 47%;
+	border: 1px solid #eaeaea;
+	text-align: left;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-left: .5em;
+	border-radius: 3px;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
+
 }
 
+.why {
+	margin-top: 4px;
+	padding-bottom: 0;
+}
 
-/*.money::before {*/
-    /*content: "$";*/
-    /*padding: 0 5px;*/
-    /*text-align: center;*/
-/*}*/
+.currencyinput input {
+	border: 0;
+	padding-left: .5em;
+	font-size: .9em;
+	font-weight: bold;
+}
 
 input[type=submit]{
 	background-color: #1CBC2C;
 	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
 	color: white;
-	border: solid;
-	border-radius: 3px; /*Rounded edges*/
+	border-radius: 5px;
 	padding: .5em; /*Choose em for scalability (relation to current font size.  Later switched to px for better pixel perfect  */
+	box-shadow: 1px 1px #19a827;
+	border:none;
 }
 
 .social {
@@ -176,4 +190,5 @@ input[type=submit]{
     font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
     font-weight: 550;
     padding: 10px;
+	box-shadow: 0px 1px #eaeaea;
 }
