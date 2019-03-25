@@ -48,7 +48,6 @@ h1 {
 	border-style: dashed;
 	padding: 1.2em;
 	margin: auto; /*allows the content to be centered as in the prototype*/
-
 }
 
 /*To understand how a speech bubble (or box in this case) worked, I had to refer to several sources and learn about CSS in general.
@@ -87,8 +86,19 @@ h1 {
 	border-color: #424242 transparent;
 }
 
-.fundBox:before {
+.progress {
+	position: relative;
+	height: .7em;
+	background-color: #f6f6f6;
+	border: thin solid #eaeaea;
+	border-bottom: none;
+}
 
+.progress span {
+	display: block;
+	height: 100%;
+	background-color: #EF5F3C;
+	color: #EF5F3C;
 }
 
 .fundBox {
@@ -96,8 +106,6 @@ h1 {
 	border: thin solid #eaeaea;
 	padding: 20px;
 	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
-	/*box-shadow: 2px 2px;*/
-
 }
 
 .fundBox span {
@@ -168,6 +176,4 @@ input[type=submit]{
     font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
     font-weight: 550;
     padding: 10px;
-
 }
-
