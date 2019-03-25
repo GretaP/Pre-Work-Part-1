@@ -62,7 +62,7 @@ h1 {
 	color: white;
 	font-size: .9em;
 	background: #424242;
-	border-radius: 5px;
+	border-radius: 3px;
 	/*-webkit-border-radius:5px;*/
 	/*-moz-border-radius:10px;*/
 	margin: 1em 0 1em;
@@ -76,13 +76,11 @@ h1 {
 	width: 0;
 	height: 0;
 	bottom: -6px; /*From above sources: value = - border-top-width - border-bottom-width */
-	border-width: 7px 5px 0; /* Learned: vary these values to change the angle of the vertex */
+	border-width: 7px 5px 0; /* Learned: vary these values to change the angle of the vertex.  Top, bottom, R, L */
 	border-style: solid; /*Because the border makes the triangle, we need to see it :)*/
 	right: 12%;
 	border-color: #424242 transparent;
 }
-
-/*to do : figure stuff out from https://leaverou.github.io/bubbly/*/
 
 .fundBox:before {
 
@@ -90,7 +88,9 @@ h1 {
 
 .fundBox {
 	color: #777;
-	font-size: .75em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
+	border-style: solid;
+	padding: 20px;
+	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
 }
 
 .fundBox span {
@@ -100,7 +100,8 @@ h1 {
 }
 
 .fundBox p {
-	padding: .5em;
+	/*padding: .5em;*/
+	padding-bottom: 10px;
 	text-align: left;
 }
 
@@ -109,6 +110,16 @@ h1 {
 	text-align: left;
 	font-style: italic;
 	text-decoration: none;
+}
+
+.fundBox form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.fundBox input{
+	width:45%;
 }
 
 input[type=submit]{
