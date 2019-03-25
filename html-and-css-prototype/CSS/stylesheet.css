@@ -42,14 +42,12 @@ h1 {
 /* Your CSS code goes here */
 
 .prototypeHolder {
-	/*Match size of original prototype - I am not sure what is desired behavior in larger or smaller views, so I'm sticking with the original size of the photo of the prototype*/
+	/*Match size of original prototype - I am not sure what is desired behavior in larger or smaller views, so I'm sticking with the original size of the photo of the prototype
+	I am also making the assumption that flex behavior is not required -*/
 	width: 303px;
 	border-style: dashed;
-	padding: 1em;
-
-	/*display: flex;*/
-	/*align-self: center;*/
-	/*flex-direction: column;*/
+	padding: 1.2em;
+	margin: auto; /*allows the content to be centered as in the prototype*/
 }
 
 /*To understand how a speech bubble (or box in this case) worked, I had to refer to several sources and learn about CSS in general.
@@ -60,8 +58,9 @@ h1 {
 */
 .speechBox {
 	position: relative;
-	padding: .6em;
+	padding: .9em;
 	color: white;
+	font-size: .9em;
 	background: #424242;
 	border-radius: 5px;
 	/*-webkit-border-radius:5px;*/
@@ -76,24 +75,40 @@ h1 {
 	position: absolute;
 	width: 0;
 	height: 0;
-	bottom: -8px; /*From above sources: value = - border-top-width - border-bottom-width */
-	border-width: 8px 4px 0; /* Learned: vary these values to change the angle of the vertex */
+	bottom: -6px; /*From above sources: value = - border-top-width - border-bottom-width */
+	border-width: 7px 5px 0; /* Learned: vary these values to change the angle of the vertex */
 	border-style: solid; /*Because the border makes the triangle, we need to see it :)*/
-	right: 10%;
-	border-color: red transparent;
+	right: 12%;
+	border-color: #424242 transparent;
 }
 
 /*to do : figure stuff out from https://leaverou.github.io/bubbly/*/
 
+.fundBox:before {
+
+}
+
 .fundBox {
 	color: #777;
+	font-size: .75em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
 }
 
 .fundBox span {
 	color: #EF5F3C;
 	font-weight: bold;
 	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif; /*This font seems off*/
+}
 
+.fundBox p {
+	padding: .5em;
+	text-align: left;
+}
+
+.fundBox a {
+	color: #20A1D4;
+	text-align: left;
+	font-style: italic;
+	text-decoration: none;
 }
 
 input[type=submit]{
@@ -104,3 +119,11 @@ input[type=submit]{
 	border-radius: 5px; /*Rounded edges*/
 	padding: .5em; /*Choose em for scalability (relation to current font size */
 }
+
+.social {
+	display: flex;
+	flex-directon: row;
+	justify-content: space-between;
+
+}
+
