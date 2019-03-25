@@ -45,7 +45,6 @@ h1 {
 	/*Match size of original prototype - I am not sure what is desired behavior in larger or smaller views, so I'm sticking with the original size of the photo of the prototype
 	I am also making the assumption that flex behavior is not required -*/
 	width: 303px;
-	border-style: dashed;
 	padding: 1.2em;
 	margin: auto; /*allows the content to be centered as in the prototype*/
 }
@@ -100,6 +99,8 @@ h1 {
 	height: 100%;
 	background-color: #EF5F3C;
 	color: #EF5F3C;
+	box-shadow: 0px 1px #ff8c3a inset;
+	position: relative;
 }
 
 .fundBox {
@@ -107,6 +108,8 @@ h1 {
 	border: thin solid #eaeaea;
 	padding: 20px 20px 5px 20px;
 	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
+	box-shadow: 0px 1px #f6f6f6;
+	position: relative;
 }
 
 .fundBox span {
@@ -140,16 +143,16 @@ h1 {
 	box-sizing: border-box;
 }
 
-.currencyinput {
+.currency {
 	width: 47%;
 	border: 1px solid #eaeaea;
+	box-shadow: 0px 1px #f6f6f6 inset;
 	text-align: left;
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-left: .5em;
 	border-radius: 3px;
 	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif;
-
 }
 
 .why {
@@ -157,8 +160,9 @@ h1 {
 	padding-bottom: 0;
 }
 
-.currencyinput input {
+.currency input {
 	border: 0;
+	box-shadow: 0px 1px #f6f6f6 inset;
 	padding-left: .5em;
 	font-size: .9em;
 	font-weight: bold;
@@ -168,10 +172,12 @@ input[type=submit]{
 	background-color: #1CBC2C;
 	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
 	color: white;
-	border-radius: 5px;
+	border-radius: 2px;
+	margin-top: 1px;
 	padding: .5em; /*Choose em for scalability (relation to current font size.  Later switched to px for better pixel perfect  */
 	box-shadow: 1px 1px #19a827;
 	border:none;
+	font-size: 1.2em;
 }
 
 .social {
