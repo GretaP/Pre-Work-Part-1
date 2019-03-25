@@ -48,6 +48,7 @@ h1 {
 	border-style: dashed;
 	padding: 1.2em;
 	margin: auto; /*allows the content to be centered as in the prototype*/
+
 }
 
 /*To understand how a speech bubble (or box in this case) worked, I had to refer to several sources and learn about CSS in general.
@@ -69,6 +70,10 @@ h1 {
 	/*Without a margin (outer padding) you can't see the triangle)*/
 }
 
+.speechBox span{
+	font-weight: bold;
+}
+
 .speechBox:after{
 	/*Learned: you can make a triangle in CSS by defining what sides are transparent and which aren't. */
 	content: ""; /*If this isn't here, the triangle will disappear*/
@@ -88,9 +93,11 @@ h1 {
 
 .fundBox {
 	color: #777;
-	border-style: solid;
+	border: thin solid #eaeaea;
 	padding: 20px;
 	font-size: .8em; /*this looks about right, but it's hard to tell with the different font.  Ruler shows approx the same*/
+	/*box-shadow: 2px 2px;*/
+
 }
 
 .fundBox span {
@@ -119,22 +126,48 @@ h1 {
 }
 
 .fundBox input{
-	width:45%;
+	width:47%;
+	height: 45px;
 }
+
+input[type=number]{
+	padding-left: 15px;
+    border-radius: 3px;
+    border: solid thin #eaeaea;
+}
+
+
+/*.money::before {*/
+    /*content: "$";*/
+    /*padding: 0 5px;*/
+    /*text-align: center;*/
+/*}*/
 
 input[type=submit]{
 	background-color: #1CBC2C;
 	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
 	color: white;
 	border: solid;
-	border-radius: 5px; /*Rounded edges*/
-	padding: .5em; /*Choose em for scalability (relation to current font size */
+	border-radius: 3px; /*Rounded edges*/
+	padding: .5em; /*Choose em for scalability (relation to current font size.  Later switched to px for better pixel perfect  */
 }
 
 .social {
+    margin-top: 10px;
 	display: flex;
 	flex-directon: row;
 	justify-content: space-between;
+}
+
+.social button {
+	width: 45%;
+    background-color: #f6f6f6;
+    border-radius: 3px;
+    border: solid thin #eaeaea;
+    color: dimgrey;
+    font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+    font-weight: 550;
+    padding: 10px;
 
 }
 
