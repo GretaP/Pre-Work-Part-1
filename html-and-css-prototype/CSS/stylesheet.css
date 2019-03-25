@@ -40,6 +40,67 @@ h1 {
 */
 
 /* Your CSS code goes here */
+
+.prototypeHolder {
+	/*Match size of original prototype - I am not sure what is desired behavior in larger or smaller views, so I'm sticking with the original size of the photo of the prototype*/
+	width: 303px;
+	border-style: dashed;
+	padding: 1em;
+
+	/*display: flex;*/
+	/*align-self: center;*/
+	/*flex-direction: column;*/
+}
+
+/*To understand how a speech bubble (or box in this case) worked, I had to refer to several sources and learn about CSS in general.
+    2 key resources that I used to learn how to do this are below, my code is directly based on their work:
+    - http://nicolasgallagher.com/pure-css-speech-bubbles/demo/default.css
+    - https://leaverou.github.io/bubbly/
+    Also helpful: https://css-tricks.com/snippets/css/css-triangle/
+*/
+.speechBox {
+	position: relative;
+	padding: .6em;
+	color: white;
+	background: #424242;
+	border-radius: 5px;
+	/*-webkit-border-radius:5px;*/
+	/*-moz-border-radius:10px;*/
+	margin: 1em 0 1em;
+	/*Without a margin (outer padding) you can't see the triangle)*/
+}
+
+.speechBox:after{
+	/*Learned: you can make a triangle in CSS by defining what sides are transparent and which aren't. */
+	content: ""; /*If this isn't here, the triangle will disappear*/
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -8px; /*From above sources: value = - border-top-width - border-bottom-width */
+	border-width: 8px 4px 0; /* Learned: vary these values to change the angle of the vertex */
+	border-style: solid; /*Because the border makes the triangle, we need to see it :)*/
+	right: 10%;
+	border-color: red transparent;
+}
+
+/*to do : figure stuff out from https://leaverou.github.io/bubbly/*/
+
 .fundBox {
 	color: #777;
+}
+
+.fundBox span {
+	color: #EF5F3C;
+	font-weight: bold;
+	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif; /*This font seems off*/
+
+}
+
+input[type=submit]{
+	background-color: #1CBC2C;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	color: white;
+	border: solid;
+	border-radius: 5px; /*Rounded edges*/
+	padding: .5em; /*Choose em for scalability (relation to current font size */
 }
